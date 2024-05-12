@@ -1,38 +1,138 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #5b5c60;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.card-container {
+  perspective: 1000px;
+  width: 950px;
+  height: 80vh;
+  transition: transform 0.5s;
+  overflow: hidden;
+  background: radial-gradient(circle 40vmax at var(--cX) var(--cY), rgb(26, 26, 29) 0%, rgb(10, 10, 10) 100%);
+  box-shadow: var(--sX) var(--sY) 50px 0px rgba(18, 18, 19, .1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+  height: 83%;
+  display: flex;
+  background-color: rgb(10 10 10);
+  color: #cccccc;
+  display: flex;
+  border: 2px solid #7c7d81;
+  border-radius: 15px;
+  padding: 5%;
+}
+
+.header {
+  width: 90%;
+  position: absolute;
+  display: flex;
+  z-index: 9999;
+}
+
+.logo {
+  text-align: start;
+  width: 30%;
+  font-size: 2em;
+}
+
+.text {
+    font-size: 70px;
+    font-weight: bold;
+    color: #121212;
+    text-align: center;
+    text-shadow: -1px 1px 0 white,
+            1px 1px 0 grey,
+           1px -1px 0 white,
+          -1px -1px 0 grey;
+  
+}
+
+.links{
+  text-align: end;
+  width: 70%;
+  font-size: 1.7em;
+  font-weight: 300;
+  margin-top: 12px;
+}
+
+.links span {
+  margin-left: 1em;
+}
+
+a {
+  color: #cccccc;
+  cursor: pointer;
+}
+
+.content {
+  z-index: 9999;
+  position: absolute;
+  height: 80%;
+  margin-top: 40px;
+  width: 55%;
+  color: #cccccc;
+  transition: opacity 0.3s;
+  opacity: 0;
+  text-align: start;
+}
+
+.content.active {
+  opacity: 1;
+  z-index: 99999 !important;
+}
+
+.card-container.flipped .card, .flipped {
+  transform: rotateY(180deg);
+}
+
+.project-list {
+  z-index: 9999;
+  margin-left: 70%;
+  position: absolute;
+  width: 15%;
+  text-align: start;
+  height: 80%;
+  margin-top: 100px;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+ul li {
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: start;
+  padding: 5% 0;
+}
+
+.svg-container {
+  width: 100%;
+  height: 100%;
+}
+
+.intro {
+  font-weight: 300;
+}
+
+.project-description {
+  margin-top: 100px;
+  z-index: 99999;
 }
