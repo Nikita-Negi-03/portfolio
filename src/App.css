@@ -143,7 +143,7 @@ ul li {
 @media screen and (max-width: 998px) {
   .App{
     height: 100%;
-    font-size: 1.2em;
+    font-size: 1em;
   }
   .container {
     height: 100%;
@@ -170,7 +170,7 @@ ul li {
   }
 
   .content {
-    margin-top: 384px ;
+    margin-top: 325px ;
     position: relative;
     display: none;
     padding: 20px;
@@ -178,10 +178,23 @@ ul li {
 
   .active {
     display: block;
-    width: 100%;
+    width: auto;
   }
 
+}
+
+@media screen and (max-width:998px) and (min-width:550px) {
+  .svg-container {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width:549px) {
   .svg-container {
     width: 72%;
+  }
+
+  .card {
+    min-height: 100vh;
   }
 }
