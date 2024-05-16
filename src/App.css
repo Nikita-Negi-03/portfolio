@@ -54,7 +54,10 @@
     font-size: 70px;
     font-weight: bold;
     color: #121212;
-    text-align: center;
+    text-align: start;
+    z-index: 99999  !important;
+    text-align: start;
+    cursor: pointer;
     text-shadow: -1px 1px 0 white,
             1px 1px 0 grey,
            1px -1px 0 white,
@@ -83,7 +86,7 @@ a {
   z-index: 9999;
   position: absolute;
   height: 80%;
-  margin-top: 40px;
+  margin-top: 70px;
   width: 55%;
   color: #cccccc;
   transition: opacity 0.3s;
@@ -133,6 +136,6 @@ ul li {
 }
 
 .project-description {
-  margin-top: 100px;
+  margin-top: 50px;
   z-index: 99999;
 }

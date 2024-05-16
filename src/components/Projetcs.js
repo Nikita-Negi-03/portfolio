@@ -11,7 +11,7 @@ const Projetcs = ({handleClick}) => {
             <li onClick={()=> handleClick(0)}>Home</li>
             <li onClick={()=> handleClick(1)}>Chatter Box</li>
             <li onClick={()=> handleClick(2)}>Food App</li>
-            <li onClick={()=> handleClick(3)}>Test App</li>
+            <li onClick={()=> handleClick(3)}>Signature Canvas</li>
         </ul>
     </div>
   )

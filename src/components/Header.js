@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({handleClick}) => {
   return (
     <>
         <div className='logo'>
-            <span className='text'>N</span>
+            <span className='text' onClick={()=> handleClick(0)}>N</span>
         </div>
         <div className='links'>
             <span><a href='mailto:nikitanegi044@gmail.com' ><i className="fa-regular fa-envelope"></i></a></span>

@@ -2,9 +2,9 @@ import React, {useEffect, useState} from 'react'
 import Welcome from './welcome'
 import ChatApp from './chatApp'
 import FoodApp from './foodApp'
-import Test from './Test'
 import Projetcs from './Projetcs'
 import Header from './Header'
+import SignCanvas from './SignCanvas'
 
 const ProjectContainer = () => {
 
@@ -25,7 +25,7 @@ const ProjectContainer = () => {
         <div className="card">
             <div className='card-dark' >
               <div className='header'>
-                <Header />
+                <Header handleClick={handleClick} />
               </div>
               <div className={`content ${activeIndex === 0 ? 'active' : ''}`}>
                   <Welcome />
@@ -37,7 +37,7 @@ const ProjectContainer = () => {
                   <FoodApp />
               </div>
               <div className={`content ${activeIndex === 3 ? 'active' : ''}`}>
-                  <Test />
+                  <SignCanvas />
               </div>
               <div className='project-list'>
                   <Projetcs handleClick={handleClick} />

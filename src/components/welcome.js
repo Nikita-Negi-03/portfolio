@@ -24,7 +24,7 @@ const Welcome = () => {
 
   return (
     <div className="animation-container">
-        <svg viewBox="0 0 300 100" className="svg-container">
+        <svg viewBox="0 10 300 90" className="svg-container">
           <text x="0" y="80" fontSize="60" fill="#fff" fontWeight={300}>
             {revealText}
           </text>
