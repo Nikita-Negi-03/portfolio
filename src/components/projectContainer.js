@@ -23,7 +23,6 @@ const ProjectContainer = () => {
     <div className={`card-container ${flip ? 'flipped' : ''} cursor-container`}>
       <div />
         <div className="card">
-            <div className='card-dark' >
               <div className='header'>
                 <Header handleClick={handleClick} />
               </div>
@@ -43,7 +42,7 @@ const ProjectContainer = () => {
                   <Projetcs handleClick={handleClick} />
               </div>
             </div>
-        </div>
+        
     </div>
   )
 }
